@@ -1,0 +1,144 @@
+html,
+body {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Molengo, sans-serif;
+}
+
+.item {
+  outline: 1px solid black;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+}
+
+/* Row-Column Example */
+.row-column {
+  grid-template-columns: 40px 50px 1fr 50px 40px;
+  grid-template-rows: .25fr 100px .75fr;
+}
+
+.row-column .item:nth-child(2n) {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+.row-column .item:nth-child(2n + 1) {
+  background-color: rgba(202, 96, 96, 0.5);
+}
+
+/* Area Example */
+
+.areas > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.areas {
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas: "header header" "sidebar main" "footer footer";
+}
+
+.header {
+  background-color: cadetblue;
+  grid-area: header;
+  padding: 1em 0;
+}
+
+.sidebar {
+  background-color: darksalmon;
+  grid-area: sidebar;
+}
+
+.main {
+  background-color: wheat;
+  grid-area: main;
+}
+
+.footer {
+  background-color: mistyrose;
+  grid-area: footer;
+  padding: 2em 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 60em) {
+  .areas {
+    grid-template-areas: "header header" "main main""sidebar sidebar" "footer footer";
+  }
+}
+/* Form Example */
+
+.user-buttons > button {
+  background-color: darkred;
+  color: #fff;
+  border: 1px solid grey;
+  padding: 0.5em 1.25em;
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  font-size: 1.5em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 0.5px solid grey;
+}
+.form {
+  width: 800px;
+  border: 2px solid black;
+  height: 450px;
+  grid-template-columns: max-content min-content 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: "firstNameLabel firstNameInput department"
+    "lastNameLabel lastNameInput department"
+    "addressLabel addressInput department" ". buttons buttons";
+}
+label[for="firstName"] {
+  grid-area: firstNameLabel;
+  padding: 3em 1em 1em 1em;
+}
+#firstName {
+  grid-area: firstNameInput;
+  margin: 1em;
+}
+label[for="lastName"] {
+  grid-area: lastNameLabel;
+  padding: 3em 1em 1em 1em;
+}
+#lastName {
+  grid-area: lastNameInput;
+  margin: 1em;
+}
+label[for="address"] {
+  grid-area: addressLabel;
+  padding: 3em 1em 1em 1em;
+}
+#address {
+  grid-area: addressInput;
+  margin: 1em;
+}
+.department {
+  grid-area: department;
+  margin: 2em 4em 2em 2em;
+}
+.department-list {
+  list-style: none;
+  border: 0.5px solid #605d5d;
+  border-radius: 0.5em;
+  padding: 0.25em 0 8.5em 0.25em;
+}
+.user-buttons {
+  grid-area: buttons;
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+}
