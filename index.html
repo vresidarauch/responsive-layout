@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <header class="header-container">
+
+    <header>
+
         <div id="home">
             <h1 class="name">
                 <a href="#home">Vresida Rauch</a>
@@ -23,17 +25,19 @@
                 <a href="#contact">Contact</a>
             </nav>
 
-            <div class="intro">
-                <figure>
-                    <img src="images/responsive-layout-profile.png" alt="cartoon picture of a brown skinned black haired person in a red shirt"
-                    />
-                </figure>
-
-                <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in fornt-end
-                    web development at Treehouse and am excited to put all my skills to use!</p>
-            </div>
         </div>
+
     </header>
+
+    <div class="intro">
+        <figure class="my-pic">
+            <img src="images/responsive-layout-profile.png" alt="cartoon picture of a brown skinned black haired person in a red shirt"
+            />
+        </figure>
+
+        <p class="blurb">Hi! I'm a front-end developer who loves responsive design and CSS. I recently finished a degree in fornt-end web
+            development at Treehouse and am excited to put all my skills to use!</p>
+    </div>
 
     <main>
         <div id="portfolio" class="portfolio-container">
@@ -84,15 +88,27 @@
             <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from
                 you!
             </p>
-            <p class="personal-info">Phone <a href="tel:+11115551234">+1(111)555-1234</a></p>
+            <p class="personal-info">Phone <a href="tel:+15859671857">+1(585)967-1857</a></p>
             <p class="personal-info">Email <a href="mailto:vresidarauch@yahoo.com">vresidarauch@yahoo.com</a></p>
+        </div>
+
+        <div class="line-container">
         </div>
 
     </main>
 
-    <footer>
+    <footer class="mobile">
         <p>Vresida Rauch</p>
         <a href="#home">Back to top</a>
+    </footer>
+
+    <footer class="not-mobile">
+        <p>Vresida Rauch</p>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </footer>
 </body>
 
