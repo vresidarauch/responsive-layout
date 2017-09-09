@@ -36,7 +36,7 @@ img {
 figure {
   margin: 0;
   line-height: 0;
-  position: relative;
+  /* position: relative; */
 }
 
 /* =======================
@@ -137,52 +137,34 @@ footer {
 /* Media Queries */
 
 @media (min-width: 48em) {
-  body {
-    padding-top: 3.25em; /* move the banner down from under the header */
-  }
-
-  header {
-    position: fixed; /* relative to the viewport */
-    background-color: rgba(255, 255, 255, 0.97);
-    width: 100%;
-    top: 0; /* touches the top of the viewport */
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-    z-index: 2;
-  }
-
-  main,
-  .container {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  header .container {
-    display: flex;
-    justify-content: space-between;
+  header .name {
+    text-align: center;
   }
 
   nav {
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
 
-  .tagline {
-    font-size: 1.4em;
+  .intro img {
+    grid-area: picture;
+    padding: 0 1.5em 0 0;
+    margin: 0 0 4em 0;
   }
 
-  /* Columns */
-  main {
-    display: flex;
-    flex-wrap: wrap;
+  .intro p {
+    grid-area: description;
+    padding: 1.5em 0 0 1.5em;
+    text-align: left;
+    font-size: 1em;
   }
 
-  .welcome,
-  .food {
-    flex-basis: 50%;
-  }
-
-  .welcome {
-    padding-right: 1em;
+  .intro {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-areas: "description picture";
+    grid-column-gap: 1em;
+    padding-top: 3.2em;
   }
 }
 
