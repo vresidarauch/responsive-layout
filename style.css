@@ -125,13 +125,12 @@ footer {
 }
 
 .mobile {
-  visibility: visible;
   display: flex;
   justify-content: space-between;
 }
 
 .not-mobile {
-  visibility: hidden;
+  display: none;
 }
 
 /* Media Queries */
@@ -226,11 +225,15 @@ footer {
     margin: 0 1.5em;
   }
   .mobile {
-    visibility: hidden;
+    display: none;
   }
   .not-mobile {
-    visibility: visible;
     display: flex;
+    justify-content: space-between;
+  }
+  .not-mobile p {
+    margin-top: 0.25em;
+    padding: 0.5em 1em; /* makes the space for the link target larger */
   }
 } /* end media query for 48em */
 
