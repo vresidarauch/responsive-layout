@@ -92,6 +92,10 @@ nav a:hover {
   margin-bottom: 4em;
   padding: 1em;
 }
+.portfolio-container h2 {
+  text-transform: uppercase;
+}
+
 .synopsis {
   margin-top: 0;
 }
@@ -133,7 +137,9 @@ footer {
   display: none;
 }
 
-/* Media Queries */
+/**********************/
+/* Tablet Media Query */
+/**********************/
 
 @media (min-width: 48em) {
   header .name {
@@ -237,17 +243,40 @@ footer {
   }
 } /* end media query for 48em */
 
+/**********************/
+/* Laptop Media Query */
+/**********************/
 @media (min-width: 64em) {
-  .welcome,
-  .directions {
-    flex-basis: 30%;
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: max-content repeat(2, 1fr);
+    grid-gap: 1.5em;
+    grid-template-areas: "portfolio portfolio portfolio"
+      "marketing search travel" "favorites photo calculator";
+    margin-bottom: 2em;
+  }
+  .search-page {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
   }
 
-  .directions {
-    padding-left: 1em;
+  .travel-app {
+    padding-left: 0;
+    padding-right: 1.5em;
   }
 
-  .food {
-    flex-basis: 40%;
+  .favorite-spots {
+    padding-left: 1.5em;
+    padding-right: 0;
   }
-}
+
+  .photo-gallery {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+  }
+  .interested,
+  .personal-info {
+    font-size: 1.3em;
+  }
+} /* end laptop media query */
