@@ -142,10 +142,6 @@ footer {
 /**********************/
 
 @media (min-width: 48em) {
-  header .name {
-    text-align: center;
-  }
-
   nav {
     display: flex;
     justify-content: center;
@@ -247,6 +243,11 @@ footer {
 /* Laptop Media Query */
 /**********************/
 @media (min-width: 64em) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .portfolio-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
